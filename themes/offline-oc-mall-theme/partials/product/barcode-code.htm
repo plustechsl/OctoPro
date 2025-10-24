@@ -1,0 +1,8 @@
+<div class="mall-product__extra-fields">
+    {% if item.barcode %}
+        <p><strong>Codi de barres:</strong> {{ item.barcode }}</p>
+    {% endif %}
+    {% if item.product_code %}
+        <p><strong>Codi producte:</strong> {{ item.product_code }}</p>
+    {% endif %}
+</div>

@@ -1,0 +1,10 @@
+plugin:
+    name: 'furroy.productes::lang.plugin.name'
+    description: 'furroy.productes::lang.plugin.description'
+    author: Furroy
+    icon: oc-icon-adjust
+    homepage: ''
+permissions:
+    furroy.productes.access_productes:
+        tab: Productes
+        label: 'Accedir a Productes'

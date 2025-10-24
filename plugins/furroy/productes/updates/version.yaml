@@ -1,0 +1,11 @@
+v1.0.1:
+    - 'Initialize plugin'
+v1.0.2:
+    - 'Created table furroy_productes_productes'
+    - builder_table_create_furroy_productes_productes.php
+v1.0.3:
+    - 'Created table furroy_productes_productes'
+    - builder_table_create_furroy_productes_productes_2.php
+v1.0.4:
+    - 'Updated table furroy_productes_productes'
+    - builder_table_update_furroy_productes_productes.php

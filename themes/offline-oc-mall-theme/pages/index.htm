@@ -1,0 +1,19 @@
+url = "/"
+layout = "default"
+title = "Homepage"
+is_hidden = 0
+
+[viewBag]
+localeUrl[en] = "/"
+
+[products]
+filterComponent = "productsFilter"
+setPageTitle = 0
+includeVariants = 1
+includeChildren = 0
+perPage = 9
+paginate = 1
+==
+<h1>Benvingut a la pagina d'intercanvi de productes</h1>
+<p>Tenim a disposicio els següents productes:</p>
+{% component 'products' %}

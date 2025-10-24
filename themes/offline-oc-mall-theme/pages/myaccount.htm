@@ -1,0 +1,15 @@
+url = "/account/:page?"
+layout = "default"
+title = "Account"
+is_hidden = 0
+
+[session]
+security = "user"
+redirect = "login"
+checkToken = 0
+
+[myAccount]
+page = "{{ :page }}"
+==
+<img src="{{ user.avatar.path }}" alt="Avatar de l'usuari" class="user-avatar" width="100" height="100">
+{% component 'myAccount' %}

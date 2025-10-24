@@ -1,0 +1,74 @@
+v1.0.1:
+    - 'Initialize plugin'
+v1.0.2:
+    - 'Created table furroy_clients_clients'
+    - builder_table_create_furroy_clients_clients.php
+v1.0.3:
+    - 'Drop table furroy_productes_productes'
+    - builder_table_delete_furroy_productes_productes.php
+v1.0.4:
+    - 'Created table furroy_clients_encarregs'
+    - builder_table_create_furroy_clients_encarregs.php
+v1.0.5:
+    - 'Updated table furroy_clients_clients'
+    - builder_table_update_furroy_clients_clients.php
+v1.0.6:
+    - 'Updated table furroy_clients_encarregs'
+    - builder_table_update_furroy_clients_encarregs.php
+v1.0.7:
+    - 'Updated table furroy_clients_encarregs'
+    - builder_table_update_furroy_clients_encarregs_2.php
+v1.0.8:
+    - 'Updated table furroy_clients_encarregs'
+    - builder_table_update_furroy_clients_encarregs_3.php
+v1.0.9:
+    - 'Updated table furroy_clients_encarregs'
+    - builder_table_update_furroy_clients_encarregs_4.php
+v1.0.10:
+    - 'Updated table furroy_clients_encarregs'
+    - builder_table_update_furroy_clients_encarregs_5.php
+v1.0.11:
+    - 'Updated table furroy_clients_encarregs'
+    - builder_table_update_furroy_clients_encarregs_6.php
+v1.0.12:
+    - 'Updated table furroy_clients_encarregs'
+    - builder_table_update_furroy_clients_encarregs_7.php
+v1.0.13:
+    - 'Updated table furroy_clients_encarregs'
+    - builder_table_update_furroy_clients_encarregs_8.php
+v1.0.14:
+    - 'Updated table furroy_clients_encarregs'
+    - builder_table_update_furroy_clients_encarregs_9.php
+v1.0.15:
+    - 'Updated table furroy_clients_encarregs'
+    - builder_table_update_furroy_clients_encarregs_10.php
+v1.0.16:
+    - 'Updated table furroy_clients_encarregs'
+    - builder_table_update_furroy_clients_encarregs_11.php
+v1.0.17:
+    - 'Updated table furroy_clients_clients'
+    - builder_table_update_furroy_clients_clients_2.php
+v1.0.18:
+    - 'Updated table furroy_clients_encarregs'
+    - builder_table_update_furroy_clients_encarregs_12.php
+v1.0.19:
+    - 'Updated table furroy_clients_encarregs'
+    - builder_table_update_furroy_clients_encarregs_13.php
+v1.0.20:
+    - 'Updated table furroy_clients_encarregs'
+    - builder_table_update_furroy_clients_encarregs_14.php
+v1.0.21:
+    - 'Updated table furroy_clients_encarregs'
+    - builder_table_update_furroy_clients_encarregs_15.php
+v1.0.22:
+    - 'Updated table furroy_clients_encarregs'
+    - builder_table_update_furroy_clients_encarregs_16.php
+v1.0.23:
+    - 'Updated table furroy_clients_encarregs'
+    - builder_table_update_furroy_clients_encarregs_17.php
+v1.0.24:
+    - 'Updated table furroy_clients_encarregs'
+    - builder_table_update_furroy_clients_encarregs_18.php
+v1.0.25:
+    - 'Updated table furroy_clients_encarregs'
+    - builder_table_update_furroy_clients_encarregs_19.php

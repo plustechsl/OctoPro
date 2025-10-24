@@ -1,0 +1,30 @@
+columns:
+    id:
+        label: 'codi encàrreg'
+        type: text
+        searchable: true
+        sortable: true
+    nom_client:
+        label: 'nom client'
+        type: text
+        searchable: true
+        sortable: true
+    titol:
+        label: títol
+        type: text
+        searchable: true
+    descripcio:
+        label: descripció
+        type: text
+        searchable: true
+    data:
+        label: 'data encàrreg'
+        type: text
+        searchable: true
+        sortable: true
+    fet:
+        label: FET
+        type: switch
+    estat_encarreg:
+        label: 'estat encàrreg'
+        type: text

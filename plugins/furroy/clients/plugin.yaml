@@ -1,0 +1,19 @@
+plugin:
+    name: 'furroy.clients::lang.plugin.name'
+    description: 'furroy.clients::lang.plugin.description'
+    author: Furroy
+    icon: oc-icon-adjust
+    homepage: ''
+permissions:
+    furroy.clients.access_clients:
+        tab: Clients
+        label: 'Accedir al plugin clients'
+    furroy.clients.access_encarrecs:
+        tab: Encarregs
+        label: 'Accedir a encarregs'
+    furroy.clients.access_mostrarbiografia:
+        tab: Perfil
+        label: 'Ver biografía propia'
+    furroy.clients.access_editarbiografia:
+        tab: Perfil
+        label: 'Editar biografía propia'

@@ -1,0 +1,20 @@
+fields:
+    nom:
+        label: 'Nom del producte'
+        span: auto
+        required: 1
+        type: text
+        comment: 'Introdueix el nom del producte'
+    preu:
+        label: 'Preu del producte'
+        span: auto
+        required: 1
+        type: text
+        comment: 'Introdueix  el preu del producte'
+    client:
+        label: Client
+        nameFrom: nom
+        span: auto
+        required: 1
+        type: relation
+        comment: 'Selecciona un client que ha comprat aquest producte'

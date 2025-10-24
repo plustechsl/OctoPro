@@ -1,0 +1,10 @@
+name: Productes
+form: $/furroy/productes/models/producte/fields.yaml
+modelClass: Furroy\Productes\Models\Producte
+defaultRedirect: furroy/productes/productes
+create:
+    redirect: 'furroy/productes/productes/update/:id'
+    redirectClose: furroy/productes/productes
+update:
+    redirect: furroy/productes/productes
+    redirectClose: furroy/productes/productes

@@ -1,0 +1,10 @@
+name: Encarregs
+form: $/furroy/clients/models/encarreg/encarreg_fields.yaml
+modelClass: Furroy\Clients\Models\Encarreg
+defaultRedirect: furroy/clients/encarregs
+create:
+    redirect: 'furroy/clients/encarregs/update/:id'
+    redirectClose: furroy/clients/encarregs
+update:
+    redirect: furroy/clients/encarregs
+    redirectClose: furroy/clients/encarregs

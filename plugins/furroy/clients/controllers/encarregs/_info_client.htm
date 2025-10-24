@@ -1,0 +1,7 @@
+<div id="campEncarreg">
+    {% if client %}
+        <p><strong>Correu electrònic:</strong> {{ client.correu }}</p>
+    {% else %}
+        <p>Selecciona un client per veure la seva informació.</p>
+    {% endif %}
+</div>

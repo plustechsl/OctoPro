@@ -1,0 +1,6 @@
+name: Mall User Listener
+plugin: Custom.MallUserListener
+description: Sincronitza direcció i telèfon de Mall amb RainLab.User
+author: Copilot
+icon: icon-user
+homepage: ''

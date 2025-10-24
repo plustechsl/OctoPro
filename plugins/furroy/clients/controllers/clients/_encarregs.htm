@@ -1,0 +1,36 @@
+<?php
+    $encarregs = $formModel->encarregs;
+?>
+
+<?php if ($encarregs && $encarregs->count()): ?>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>CODI ENCÀRREG</th>
+                <th>TITOL</th>
+                <th>DESCRIPCIÓ</th>
+                <th>DATA</th>
+                <th>ESTAT</th>
+                <th>FET</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($encarregs as $encarreg): ?>
+                <tr>
+                    <td><?= $encarreg->id ?></td>
+                    <td>
+                        <a href="<?= url('admin/furroy/clients/encarregs/update/' . $encarreg->id) ?>">
+                            <?= e($encarreg->titol ?: 'S/N') ?>
+                        </a>
+                    </td>
+                    <td><?= e($encarreg->descripcio ?: 'S/N') ?></td>
+                    <td><?= $encarreg->data ?: 'S/N' ?></td>
+                    <td><?= e($encarreg->estat_encarreg ?: 'S/N') ?></td>
+                    <td><?= $encarreg->fet ? 'Sí' : 'No' ?></td>
+                </tr>
+            <?php endforeach ?>
+        </tbody>
+    </table>
+<?php else: ?>
+    <p>Aquest client no te cap encàrreg.</p>
+<?php endif ?>

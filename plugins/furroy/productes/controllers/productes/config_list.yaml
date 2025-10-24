@@ -1,0 +1,12 @@
+list: $/furroy/productes/models/producte/columns.yaml
+modelClass: Furroy\Productes\Models\Producte
+title: Productes
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'furroy/productes/productes/update/:id'

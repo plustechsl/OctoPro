@@ -1,0 +1,89 @@
+<div id="result">
+    {% flash %}
+    <p class="alert alert-success">{{ message }}</p>
+    {% endflash %}
+
+    {% if error %}
+    <p class="alert alert-danger">{{ error }}</p>
+    {% endif %}
+</div>
+
+<script type="text/javascript">
+    var booked = JSON.parse('{{ dates | raw }}');
+    var dateFormat = '{{ settings.formats_date }}';
+    var timeFormat = '{{ settings.formats_time }}';
+    var timeInterval = {{ settings.reservation_interval }};
+    var firstDay = {{ settings.first_weekday }};
+    var disableDays = "{{ settings.work_days|join(',') }}";
+    var startWork = '{{ settings.work_time_from }}';
+    var finishWork = '{{ settings.work_time_to }}';
+</script>
+
+<form
+    class="reservationform form"
+    method="post"
+    data-request="{{ __SELF__ }}::onSubmit"
+    data-request-update="'{{ __SELF__ }}::success': '#result'"
+    data-request-success="$('#{{ __SELF__ }} input[type=text], #{{ __SELF__ }} textarea').val('');"
+    id="{{__SELF__}}"{% if sent %} class="sent"{% endif %}>
+
+    <div class="form-group">
+        <label for="date">Data</label>
+        <input id="date" name="date" class="form-control datepicker" type="text" value="{{ post.date }}" />
+    </div>
+    <div class="form-group">
+        <label for="time">Hora</label>
+        <input id="time" name="time" class="form-control" type="text" value="{{ post.time }}" />
+    </div>
+    <div class="form-group">
+        <label for="message">Missatge</label>
+        <textarea id="message" name="message" class="form-control" placeholder="Missatge">{{ post.message }}</textarea>
+    </div>
+
+    {# User fields: email, address, phone #}
+    {% if user %}
+        <input type="hidden" name="email" value="{{ user.email }}">
+        <input type="hidden" name="street" value="{{ user.direccio }}">
+        <input type="hidden" name="phone" value="{{ user.telefon }}">
+    {% else %}
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" class="form-control" type="email" value="{{ post.email }}" required />
+        </div>
+        <div class="form-group">
+            <label for="street">Direcció</label>
+            <input id="street" name="street" class="form-control" type="text" value="{{ post.street }}" required />
+        </div>
+        <div class="form-group">
+            <label for="phone">Telèfon</label>
+            <input id="phone" name="phone" class="form-control" type="text" value="{{ post.phone }}" required />
+        </div>
+    {% endif %}
+
+    {{ form_token() }}
+    <button type="submit" name="{{ __SELF__ }}-submit" class="btn btn-success" value="1" id="submit">{{ 'vojtasvoboda.reservations::lang.reservation.submit'|trans }}</button>
+
+</form>
+<style>
+.reservationform.form {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #ff4d4d;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.reservationform.form label { display: block; margin-top: 10px; }
+.reservationform.form input,
+.reservationform.form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+.btn-success {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+}
+</style>

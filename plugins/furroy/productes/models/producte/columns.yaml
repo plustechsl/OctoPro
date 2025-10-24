@@ -1,0 +1,11 @@
+columns:
+    nom:
+        label: Nom
+        type: text
+        searchable: true
+        sortable: true
+    preu:
+        label: Preu
+        type: number
+        searchable: true
+        sortable: true

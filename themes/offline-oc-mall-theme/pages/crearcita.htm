@@ -1,0 +1,14 @@
+url = "/crearcita"
+layout = "default"
+title = "crearCita"
+
+[reservationForm]
+
+[session]
+security = "all"
+checkToken = 0
+==
+{% component 'session' %}
+{% if user %}
+    {% component 'reservationForm' %}
+{% endif %}

@@ -1,0 +1,20 @@
+columns:
+    nom:
+        label: Nom
+        type: text
+        searchable: true
+        sortable: true
+    telefon:
+        label: Telefon
+        type: text
+        searchable: true
+    email:
+        label: Email
+        type: text
+        searchable: false
+        sortable: true
+    num_client:
+        label: Num
+        type: number
+        searchable: true
+        sortable: true

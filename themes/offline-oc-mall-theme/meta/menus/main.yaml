@@ -1,0 +1,37 @@
+name: Main
+items:
+    -
+        title: Inici
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: index
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'All Categories'
+        nesting: null
+        type: all-mall-categories
+        url: null
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: 1
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Crear Cita'
+        type: cms-page
+        code: ''
+        reference: crearcita
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'

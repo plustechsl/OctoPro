@@ -1,0 +1,88 @@
+<?php Block::put('breadcrumb') ?>
+<ul>
+    <li><a href="#">Perfil</a></li>
+</ul>
+<?php Block::endPut() ?>
+
+<style>
+    .perfil-card {
+        max-width: 600px;
+        margin: 40px auto;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+        padding: 32px 40px 24px 40px;
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+        align-items: flex-start;
+    }
+    .perfil-avatar {
+        min-width: 150px;
+        max-width: 150px;
+        min-height: 150px;
+        max-height: 150px;
+        border-radius: 12px;
+        object-fit: cover;
+        box-shadow: 0 1px 8px rgba(0,0,0,0.10);
+        background: #f3f3f3;
+    }
+    .perfil-info {
+        flex: 1;
+    }
+    .perfil-info-row {
+        margin-bottom: 18px;
+    }
+    .perfil-label {
+        font-weight: 600;
+        color: #555;
+        margin-bottom: 2px;
+        display: block;
+    }
+    .perfil-value {
+        font-size: 1.08em;
+        color: #222;
+        background: #f7f7f7;
+        border-radius: 6px;
+        padding: 7px 12px;
+        min-height: 32px;
+        display: flex;
+        align-items: center;
+    }
+    .perfil-bio {
+        white-space: pre-line;
+        min-height: 60px;
+    }
+</style>
+
+<div class="perfil-card">
+    <div>
+        <?php if ($user->avatar && $user->avatar->getThumb(150,150)): ?>
+            <img src="<?= $user->avatar->getThumb(150,150) ?>" alt="Avatar" class="perfil-avatar">
+        <?php else: ?>
+            <div class="perfil-avatar" style="display:flex;align-items:center;justify-content:center;color:#aaa;font-size:2em;">?</div>
+        <?php endif; ?>
+    </div>
+    <div class="perfil-info">
+        <div class="perfil-info-row">
+            <span class="perfil-label">Nombre de usuario:</span>
+            <span class="perfil-value"><?= e($user->login) ?></span>
+        </div>
+        <div class="perfil-info-row">
+            <span class="perfil-label">Correo:</span>
+            <span class="perfil-value"><?= e($user->email) ?></span>
+        </div>
+        <div class="perfil-info-row">
+            <span class="perfil-label">Nombres:</span>
+            <span class="perfil-value"><?= e($user->first_name) ?></span>
+        </div>
+        <div class="perfil-info-row">
+            <span class="perfil-label">Apellidos:</span>
+            <span class="perfil-value"><?= e($user->last_name) ?></span>
+        </div>
+        <div class="perfil-info-row">
+            <span class="perfil-label">Biografía:</span>
+            <span class="perfil-value perfil-bio"><?= e($user->biografia ?? '') ?></span>
+        </div>
+    </div>
+</div>

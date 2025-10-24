@@ -1,0 +1,28 @@
+language: php
+
+php:
+  - 7.0
+  - 7.1
+  - nightly
+
+matrix:
+  allow_failures:
+    - php: nightly
+
+sudo: false
+
+before_script:
+  - git clone https://github.com/octobercms/october.git
+  - mkdir -p ./october/plugins/vojtasvoboda/reservations
+  - mv !(october) october/plugins/vojtasvoboda/reservations
+  - cd october
+  - composer self-update
+  - travis_retry composer install --no-interaction --prefer-source
+  - cd plugins/vojtasvoboda/reservations
+  - composer install
+  - npm install
+
+script:
+  - ../../../vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+  - bash <(curl -s https://codecov.io/bash)
+  - npm test

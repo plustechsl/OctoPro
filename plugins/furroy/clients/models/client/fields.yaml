@@ -1,0 +1,30 @@
+fields:
+    num_client:
+        label: 'Número Client'
+        span: auto
+        required: 0
+        type: number
+        comment: 'Introdueix el número del client'
+    nom:
+        label: 'Nom del Client'
+        span: auto
+        required: 1
+        type: text
+        comment: 'Introdueix el nom del client'
+    email:
+        label: 'Correu del Client'
+        span: auto
+        required: 0
+        type: text
+        comment: 'Introdueix el correu del client'
+    telefon:
+        label: 'Telefon del client'
+        span: auto
+        required: 1
+        type: text
+        comment: 'Introdueix el telefon del client'
+    encarregs:
+        label: Encàrregs del client
+        type: partial
+        path: ~/plugins/furroy/clients/controllers/clients/_encarregs.htm
+        context: update

@@ -1,0 +1,14 @@
+<?php
+require __DIR__ . '/../vendor/autoload.php';
+$app = require_once __DIR__ . '/../bootstrap/app.php';
+$kernel = $app->make(Illuminate\Contracts\Console\Kernel::class);
+$kernel->bootstrap();
+
+$admin = \Backend\Models\User::where('login', 'admin')->first();
+if (! $admin) {
+    echo "no-admin\n"; exit;
+}
+\Backend\Facades\BackendAuth::setUser($admin);
+$nav = app(\Backend\Classes\NavigationManager::class)->listMainMenuItems();
+var_export($nav);
+echo PHP_EOL;

@@ -1,0 +1,11 @@
+name: Clients
+modelClass: Furroy\Clients\Models\Client
+form: $/furroy/clients/models/client/fields.yaml
+defaultRedirect: furroy/clients/clients
+create:
+    redirect: 'furroy/clients/clients/update/:id'
+    redirectClose: furroy/clients/clients
+update:
+    redirect: furroy/clients/clients
+    redirectClose: furroy/clients/clients
+preview: {  }
