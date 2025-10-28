@@ -1,6 +1,6 @@
 fields:
     num_client:
-        label: 'Número Client'
+        label: 'Ceba'
         span: auto
         required: 0
         type: number
