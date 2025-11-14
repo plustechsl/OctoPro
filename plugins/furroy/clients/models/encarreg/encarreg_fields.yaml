@@ -42,5 +42,6 @@ fields:
             'PDT - Pagat demanar tiquet': 'Pagat demanar tiquet'
             'TNC - Trucat no contesta': 'Trucat no contesta'
             'FNC - Finalitzat no cobrat': 'Finalitzat no cobrat'
+            'FCP - Finalitzat cobrat': 'Finalitzat cobrat'
         span: auto
         type: radio
